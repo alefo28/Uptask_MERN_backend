@@ -12,6 +12,9 @@
     "MERN",
     "Node"
   ],
+  "engines": {
+    "node": ">=14.20.1"
+  },
   "author": "Alef Passos",
   "license": "ISC",
   "dependencies": {
@@ -26,8 +29,5 @@
   },
   "devDependencies": {
     "nodemon": "^3.0.1"
-  },
-  "engines": {
-    "node":" >=14 <15s"
-    }
+  }
 }
