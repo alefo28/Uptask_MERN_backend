@@ -11,6 +11,7 @@ app.use(express.json());
 dotenv.config();
 
 conectarDB();
+
 //Configuar Cors
 const whitelist = [process.env.FRONTEND_URL];
 const corsOptions = {
