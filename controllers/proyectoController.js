@@ -14,14 +14,14 @@ const ObtenerProyectos = async (req, res) => {
 };
 
 const nuevoProyecto = async (req, res) => {
+  delete req.body.id;
   const proyecto = new Proyecto(req.body);
-  proyecto.creador = req.usuario._id;
-
+  proyecto.creador = req.usuario._id; // req.usuario viene del checkAuth
   try {
     const proyectoAlmacenado = await proyecto.save();
-    res.json(proyectoAlmacenado);
+    return res.json(proyectoAlmacenado);
   } catch (error) {
-    console.log(error);
+    console.error(error);
   }
 };
 
